@@ -2,7 +2,7 @@
 
 
 ```bash
-dart pub global activate edge_dart
+dart pub global activate --source git https://github.com/azkadev/edge.git --git-path package/edge_dart --overwrite
 ```
 
 ## Create Project

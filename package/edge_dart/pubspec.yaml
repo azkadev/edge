@@ -1,6 +1,6 @@
 name: edge_dart
 description: edge_dart library for make your program dart more easy.
-version: 0.0.0
+version: 0.0.1
 repository: https://github.com/azkadev/edge.git
 issue_tracker: https://github.com/azkadev/edge.git
 homepage: https://youtube.com/@azkadev
@@ -9,7 +9,6 @@ homepage: https://youtube.com/@azkadev
 executables:
   edge_dart: edge_dart
   
-
 environment:
   sdk: '>=3.0.0 <4.0.0'
 

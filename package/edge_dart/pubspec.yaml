@@ -14,6 +14,7 @@ environment:
 
 dependencies: 
   general_lib: ^0.0.4
+  http: ^1.1.2
   mason_logger: ^0.2.10
   path: ^1.8.2
 #   path: ^1.8.0

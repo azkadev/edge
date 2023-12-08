@@ -40,11 +40,16 @@ void main(List<String> args_raw) async {
       exit(0);
     }
 
-    Directory directory_lib = Directory(path.join(base_directory_lib.path, "lib"));
-    Directory directory_lib_template = Directory(path.join(base_directory_lib.path, "template"));
+    Directory directory_lib =
+        Directory(path.join(base_directory_lib.path, "lib"));
+    Directory directory_lib_template =
+        Directory(path.join(base_directory_lib.path, "template"));
 
     Args args = Args(args_raw);
-    String name_exe = path.basenameWithoutExtension(Platform.script.toString()).split(".").first;
+    String name_exe = path
+        .basenameWithoutExtension(Platform.script.toString())
+        .split(".")
+        .first;
     String help_msg = """
 A command-line ${name_exe}.
 
@@ -97,7 +102,8 @@ See https://youtube.com/@azkadev for detailed documentation and tutorial.
     }
     bool isSucces = false;
     if (first_args == "reload") {
-      Directory directory_pub = Directory(path.join(base_directory_lib.path, ".dart_tool", "pub"));
+      Directory directory_pub =
+          Directory(path.join(base_directory_lib.path, ".dart_tool", "pub"));
       if (directory_pub.existsSync()) {
         await directory_pub.delete(recursive: true);
       }
@@ -188,7 +194,8 @@ See https://youtube.com/@azkadev for detailed documentation and tutorial.
     }
 
     if (first_args == "version") {
-      logger.info("edge_dart version: 0.0.0 (stable) on ${Platform.operatingSystem}");
+      logger.info(
+          "edge_dart version: 0.0.0 (stable) on ${Platform.operatingSystem}");
       exit(0);
     }
 
@@ -202,7 +209,8 @@ Create a new ${name_exe} project.
 Usage: ${name_exe} create <directory> [arguments] 
   -f --force                      Force project generation, even if the target directory already exists.
   -t --template ${directory_lib_template.listSync().where((FileSystemEntity fileSystemEntity) {
-                    return (fileSystemEntity.statSync().type == FileSystemEntityType.directory);
+                    return (fileSystemEntity.statSync().type ==
+                        FileSystemEntityType.directory);
                   }).map((e) => path.basename(e.path)).toList().join("|")}
 
 Run "${name_exe} help" to see global options.
@@ -228,7 +236,8 @@ Run "${name_exe} help" to see global options.
 
       var str = directory_lib_template.list().listen(
         (FileSystemEntity fileSystemEntity) {
-          if (fileSystemEntity.statSync().type == FileSystemEntityType.directory) {
+          if (fileSystemEntity.statSync().type ==
+              FileSystemEntityType.directory) {
             dir_template.add(fileSystemEntity);
           }
         },
@@ -256,7 +265,8 @@ Run "${name_exe} help" to see global options.
         logger.info("\t${path.basename(dirTemplate.path)}");
       }
       logger.info("");
-      logger.success("Jalankan Command ini untuk membuat project dengan template\n\n  ${name_exe} create name_project -t name_template");
+      logger.success(
+          "Jalankan Command ini untuk membuat project dengan template\n\n  ${name_exe} create name_project -t name_template");
       exit(0);
     }
     if (first_args == "create") {
@@ -281,10 +291,15 @@ Run "${name_exe} help" to see global options.
         List<String> templates = () {
           if (args["-t"] != null && (args["-t"] as String).isNotEmpty) {
             return args["-t"]!.split(",").whereType<String>().toList();
-          } else if (args["--template"] != null && (args["--template"] as String).isNotEmpty) {
+          } else if (args["--template"] != null &&
+              (args["--template"] as String).isNotEmpty) {
             return args["--template"]!.split(",").whereType<String>().toList();
           }
-          List<String> templates_files = directory_lib_template.listSync().map((e) => path.basename(e.path)).whereType<String>().toList();
+          List<String> templates_files = directory_lib_template
+              .listSync()
+              .map((e) => path.basename(e.path))
+              .whereType<String>()
+              .toList();
 
           return logger.chooseAny(
             "Silahkan Pilih Project",
@@ -296,16 +311,20 @@ Run "${name_exe} help" to see global options.
           templates = ["supabase_edge_functions_template"];
         }
         String name = two_args;
-        Directory directory_create = Directory(path.join(Directory.current.path, name));
+        Directory directory_create =
+            Directory(path.join(Directory.current.path, name));
         if (directory_create.existsSync()) {
           bool is_force = () {
-            if ((args.arguments.contains("-f") || args.arguments.contains("--force"))) {
+            if ((args.arguments.contains("-f") ||
+                args.arguments.contains("--force"))) {
               return true;
             }
-            return logger.confirm("Project ${name} Sudah ada apakah anda akan makasa? :");
+            return logger.confirm(
+                "Project ${name} Sudah ada apakah anda akan makasa? :");
           }();
           if (!is_force) {
-            logger.info("Directory ${directory_create.path} already exists (use '--force' to force project generation)");
+            logger.info(
+                "Directory ${directory_create.path} already exists (use '--force' to force project generation)");
             exit(0);
           }
         }
@@ -313,17 +332,21 @@ Run "${name_exe} help" to see global options.
         if (templates.isEmpty) {
           templates = ["supabase_edge_functions_template"];
         }
-        Progress progress = logger.progress("Start Create Project ${name} menggunakan template ${templates.join(",")}...");
+        Progress progress = logger.progress(
+            "Start Create Project ${name} menggunakan template ${templates.join(",")}...");
         if (templates.length > 1) {
           // logger.info("Creating ${name} using template ${templates.join(",")}...");
           for (var i = 0; i < templates.length; i++) {
             String template = templates[i];
-            Directory directory_template_package = Directory(path.join(directory_lib_template.path, template));
+            Directory directory_template_package =
+                Directory(path.join(directory_lib_template.path, template));
             if (!directory_template_package.existsSync()) {
-              logger.err("Failed Creating ${name} using template ${template} karena tidak ada template");
+              logger.err(
+                  "Failed Creating ${name} using template ${template} karena tidak ada template");
               exit(0);
             }
-            Directory directory_create_folder = Directory(path.join(directory_create.path, template));
+            Directory directory_create_folder =
+                Directory(path.join(directory_create.path, template));
             if (!directory_create_folder.existsSync()) {
               await directory_create_folder.create(recursive: true);
             }
@@ -387,9 +410,11 @@ Created project ${name} ! In order to get started, run the following commands:
           exit(0);
         } else {
           String template = templates.first;
-          Directory directory_template_package = Directory(path.join(directory_lib_template.path, template));
+          Directory directory_template_package =
+              Directory(path.join(directory_lib_template.path, template));
           if (!directory_template_package.existsSync()) {
-            logger.err("Failed Creating ${name} using template ${template} karena tidak ada template");
+            logger.err(
+                "Failed Creating ${name} using template ${template} karena tidak ada template");
             exit(0);
           }
 
@@ -491,8 +516,10 @@ Created project ${name} ! In order to get started, run the following commands:
               exit(0);
             }
           } else {
-            progress.update("Start Download: ${path.basename(file_setup.path)}");
-            File file_setup_data = File(path.join(Directory.current.path, path.basename(file_setup.path)));
+            progress
+                .update("Start Download: ${path.basename(file_setup.path)}");
+            File file_setup_data = File(path.join(
+                Directory.current.path, path.basename(file_setup.path)));
             try {
               Response res = (await get(Uri.parse(file_setup_data.path)));
               await file_setup_data.writeAsBytes(res.bodyBytes);
@@ -502,7 +529,8 @@ Created project ${name} ! In order to get started, run the following commands:
                 "sudo",
                 [
                   "cp",
-                  path.join(Directory.current.path, path.basename(file_setup.path)),
+                  path.join(
+                      Directory.current.path, path.basename(file_setup.path)),
                   file_setup.path,
                 ],
               );
@@ -516,9 +544,11 @@ Created project ${name} ! In order to get started, run the following commands:
                   file_setup.path,
                 ],
               );
-              progress.update("Succes Saved: ${path.basename(file_setup.path)}");
+              progress
+                  .update("Succes Saved: ${path.basename(file_setup.path)}");
             } else {
-              progress.update("Failed Download: ${path.basename(file_setup.path)}\n\nMungkin Server sedang down");
+              progress.update(
+                  "Failed Download: ${path.basename(file_setup.path)}\n\nMungkin Server sedang down");
             }
           }
         }
@@ -563,7 +593,8 @@ Created project ${name} ! In order to get started, run the following commands:
             }
           } else {
             logger.info("Start Download: ${path.basename(file_setup.path)}");
-            File file_setup_data = File(path.join(Directory.current.path, path.basename(file_setup.path)));
+            File file_setup_data = File(path.join(
+                Directory.current.path, path.basename(file_setup.path)));
             try {
               Response res = (await get(Uri.parse(file_setup_data.path)));
               await file_setup_data.writeAsBytes(res.bodyBytes);
@@ -573,7 +604,8 @@ Created project ${name} ! In order to get started, run the following commands:
                 "sudo",
                 [
                   "cp",
-                  path.join(Directory.current.path, path.basename(file_setup.path)),
+                  path.join(
+                      Directory.current.path, path.basename(file_setup.path)),
                   file_setup.path,
                 ],
               );
@@ -589,7 +621,8 @@ Created project ${name} ! In order to get started, run the following commands:
               );
               logger.info("Succes Saved: ${path.basename(file_setup.path)}");
             } else {
-              logger.info("Failed Download: ${path.basename(file_setup.path)}\n\nMungkin Server sedang down");
+              logger.info(
+                  "Failed Download: ${path.basename(file_setup.path)}\n\nMungkin Server sedang down");
             }
           }
         }
@@ -635,7 +668,8 @@ Created project ${name} ! In order to get started, run the following commands:
             }
           } else {
             logger.info("Start Download: ${path.basename(file_setup.path)}");
-            File file_setup_data = File(path.join(Directory.current.path, path.basename(file_setup.path)));
+            File file_setup_data = File(path.join(
+                Directory.current.path, path.basename(file_setup.path)));
             try {
               Response res = (await get(Uri.parse(file_setup_data.path)));
               await file_setup_data.writeAsBytes(res.bodyBytes);
@@ -645,7 +679,8 @@ Created project ${name} ! In order to get started, run the following commands:
                 "sudo",
                 [
                   "cp",
-                  path.join(Directory.current.path, path.basename(file_setup.path)),
+                  path.join(
+                      Directory.current.path, path.basename(file_setup.path)),
                   file_setup.path,
                 ],
               );
@@ -660,7 +695,8 @@ Created project ${name} ! In order to get started, run the following commands:
               );
               logger.info("Succes Saved: ${path.basename(file_setup.path)}");
             } else {
-              logger.info("Failed Download: ${path.basename(file_setup.path)}\n\nMungkin Server sedang down");
+              logger.info(
+                  "Failed Download: ${path.basename(file_setup.path)}\n\nMungkin Server sedang down");
             }
           }
         }
@@ -668,7 +704,8 @@ Created project ${name} ! In order to get started, run the following commands:
         logger.info("Setup Finished");
         exit(0);
       }
-      logger.info("Setup Failed karena tidak support platform: ${dart.operatingSystem}");
+      logger.info(
+          "Setup Failed karena tidak support platform: ${dart.operatingSystem}");
       exit(0);
     }
   } catch (e, stack) {

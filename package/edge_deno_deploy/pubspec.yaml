@@ -1,0 +1,13 @@
+name: edge_deno_deploy
+description: A Deno deploy for edge.
+homepage: https://github.com/azkadev
+repository: https://github.com/azkadev/edge
+version: 0.0.0
+
+environment:
+  sdk: ">=2.18.5 <4.0.0"
+
+dependencies:
+  js: ^0.6.7
+  edge_dart_runtime: ^0.0.0
+  typings: ^0.0.4

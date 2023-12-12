@@ -1,0 +1,8 @@
+# melos_managed_dependency_overrides: edge,edge_dart_runtime,deno_deploy
+dependency_overrides:
+  edge_deno_deploy:
+    path: ../edge_deno_deploy
+  edge_dart:
+    path: ../edge_dart
+  edge_dart_runtime:
+    path: ../edge_dart_runtime

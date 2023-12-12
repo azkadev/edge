@@ -1,0 +1,27 @@
+name: edge_cli
+description: edge_dart library for make your program dart more easy.
+version: 0.0.0
+repository: https://github.com/azkadev/edge.git
+issue_tracker: https://github.com/azkadev/edge.git
+homepage: https://youtube.com/@azkadev
+
+
+executables:
+  edge_cli: edge_cli
+  
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies: 
+  general_lib: ^0.0.4
+  http: ^1.1.2
+  mason_logger: ^0.2.10
+  path: ^1.8.2
+#   path: ^1.8.0
+
+dev_dependencies:
+  lints: ^2.1.0
+  msix: ^3.12.1
+  packagex: ^0.0.28
+  test: ^1.24.2
+ 

@@ -1,0 +1,6 @@
+# melos_managed_dependency_overrides: edge,edge_dart_runtime
+dependency_overrides:
+  edge: 
+    path: ../../edge
+  edge_dart_runtime:
+    path: ..

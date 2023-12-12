@@ -1,0 +1,19 @@
+name: edge_cloudflare
+description: Write and deploy Dart functions to Cloudflare Workers.
+homepage: https://github.com/azkadev
+repository: https://github.com/azkadev/edge
+version: 0.0.0
+
+environment:
+  sdk: ">=2.18.5 <4.0.0"
+
+dependencies:
+  edge_dart: ^0.0.7
+  edge_dart_runtime: ^0.0.4+2
+  js: ^0.6.7
+  typings: ^0.0.4
+
+dev_dependencies:
+  lints: ^2.0.0
+  test: ^1.16.0
+  node_interop: ^2.1.0

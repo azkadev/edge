@@ -1,0 +1,14 @@
+name: supabase_functions_example
+description: A Supabase Edge Function written in Dart.
+publish_to: none
+
+environment:
+  sdk: ">=2.18.5 <3.0.0"
+
+dependencies:
+  edge_dart: ^0.0.11
+  edge_supabase: ^0.0.11
+  xendit: ^0.0.23
+  edge_dart_http_client:
+   path: ../../edge_dart_http_client/
+  general_lib: ^0.0.4

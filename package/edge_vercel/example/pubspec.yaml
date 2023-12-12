@@ -1,0 +1,13 @@
+name: edge_vercel_example
+description: An Vercel Edge function written in Dart.
+publish_to: none
+
+environment:
+  sdk: ">=2.18.5 <3.0.0"
+
+dependencies:
+  edge_dart: ^0.0.7
+  edge_vercel: ^0.0.4+4
+  shelf: ^1.4.0
+  shelf_router: ^1.1.3
+

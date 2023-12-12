@@ -1,0 +1,11 @@
+name = "dart-worker-example"
+compatibility_date = "2022-11-30"
+main = ".dart_tool/edge/entry.js"
+
+durable_objects.bindings = [
+  {name = "FOO_BAR", class_name = "MyDurableObject"},
+]
+
+[build]
+command = "dart run edge build edge_cloudflare --dev"
+watch_dir = ["lib", "../../packages"]

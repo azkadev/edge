@@ -1,0 +1,10 @@
+# melos_managed_dependency_overrides: edge,edge_dart_runtime,supabase_functions,deno_deploy
+dependency_overrides:
+  edge_deno_deploy:
+    path: ../../edge_deno_deploy
+  edge_dart:
+    path: ../../edge_dart
+  edge_dart_runtime:
+    path: ../../edge_dart_runtime
+  edge_supabase:
+    path: ..

@@ -1,0 +1,41 @@
+name: Deploy Function
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    env:
+      SUPABASE_ACCESS_TOKEN: ""
+      PROJECT_ID: ""
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: supabase/setup-cli@v1
+        with:
+          version: latest
+      - name: Setup Dart SDK
+        uses: dart-lang/setup-dart@v1.4
+        with:
+          sdk: 3.0.0
+
+      - name: check dart version
+        run: dart --version
+      - name: Install pub Dependencies
+        run: dart pub get
+      - name: Edge build
+        run: dart run edge build supabase_functions
+      - name: Create build
+        run: mkdir -p supabase/functions/supabase_edge_functions_template
+      - name: Copy build
+        run: cp -r -f functions/ supabase/
+      - name: Copy build
+        continue-on-error: true
+        run: supabase functions new supabase_edge_functions_template
+      - run: supabase functions deploy supabase_edge_functions_template --project-ref $PROJECT_ID

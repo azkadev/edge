@@ -1,0 +1,16 @@
+name: edge_dart_http_client
+description: A Http client package for edge.
+homepage: https://github.com/azkadev
+repository: https://github.com/azkadev/edge
+version: 0.0.0
+
+environment:
+  sdk: ">=2.18.5 <4.0.0"
+
+dependencies:
+  edge_dart_runtime: ^0.0.0
+  http: ^1.1.0
+
+dev_dependencies:
+  lints: ^2.0.0
+  test: ^1.16.0

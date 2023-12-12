@@ -1,0 +1,3 @@
+supabase: 
+  functions: 
+    supabase_edge_functions_template: lib/supabase_edge_functions_template_edge.dart

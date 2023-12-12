@@ -1,0 +1,5 @@
+[dev]
+  command = "dart --enable-vm-service run edge build netlify --dev"
+
+[build]
+  command = "dart run edge build netlify"

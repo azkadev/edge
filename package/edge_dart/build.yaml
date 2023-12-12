@@ -1,0 +1,10 @@
+targets:
+  $default:
+    builders:
+      json_serializable:
+        enabled: true
+        options:
+          # https://pub.dev/packages/json_serializable#build-configuration
+          explicit_to_json: true
+          checked: true
+          field_rename: snake

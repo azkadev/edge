@@ -9,8 +9,7 @@ export 'package:edge_dart_runtime/edge_dart_runtime.dart';
 export 'package:edge_deno_deploy/edge_deno_deploy.dart';
 
 @JS('__dartSupabaseFetchHandler')
-external set __dartSupabaseFetchHandler(
-    Promise<interop.Response> Function(interop.Request req) f);
+external set __dartSupabaseFetchHandler(Promise<interop.Response> Function(interop.Request req) f);
 
 class SupabaseFunctions {
   final FutureOr<Response> Function(Request request)? fetch;
@@ -23,6 +22,7 @@ class SupabaseFunctions {
 
     if (fetch != null) {
       __dartSupabaseFetchHandler = allowInterop((interop.Request request) {
+
         return futureToPromise(Future(() async {
           final response = await fetch!(requestFromJsObject(request));
           return response.delegate;

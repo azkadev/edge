@@ -13,6 +13,7 @@ class EdgeCommandRunner extends CommandRunner<void> {
   final Logger _logger;
 
   EdgeCommandRunner({
+    
     Logger? logger,
   })  : _logger = logger ?? Logger(),
         super("edge",

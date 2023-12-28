@@ -166,14 +166,14 @@ packages:
       path: "../edge_dart_runtime"
       relative: true
     source: path
-    version: "0.0.0"
+    version: "0.0.1"
   edge_deno_deploy:
     dependency: "direct main"
     description:
       path: "../edge_deno_deploy"
       relative: true
     source: path
-    version: "0.0.0"
+    version: "0.0.1"
   ffi:
     dependency: transitive
     description:

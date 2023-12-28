@@ -2,7 +2,7 @@ name: edge_supabase
 description: Write and deploy Dart functions to Supabase Functions.
 homepage: https://github.com/azkadev
 repository: https://github.com/azkadev/edge
-version: 0.0.0
+version: 0.0.1
 
 environment:
   sdk: ">=2.18.5 <4.0.0"
@@ -10,7 +10,7 @@ environment:
 dependencies:
   edge_deno_deploy: ^0.0.0
   edge_dart: ^0.0.3
-  edge_dart_runtime: ^0.0.0
+  edge_dart_runtime: ^0.0.1
   js: ^0.6.7
   typings: ^0.0.4
 

@@ -2,7 +2,7 @@ name: edge_dart_runtime
 description: A Edge runtime dart.
 homepage: https://github.com/azkadev
 repository: https://github.com/azkadev/edge
-version: 0.0.0
+version: 0.0.1
 
 environment:
   sdk: ">3.1.0 <4.0.0"

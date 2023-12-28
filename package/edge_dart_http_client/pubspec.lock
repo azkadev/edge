@@ -135,7 +135,7 @@ packages:
       path: "../edge_dart_runtime"
       relative: true
     source: path
-    version: "0.0.0"
+    version: "0.0.1"
   file:
     dependency: transitive
     description:

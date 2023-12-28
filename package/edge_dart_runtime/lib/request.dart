@@ -53,6 +53,21 @@ class Request implements Body {
 
   String get method => _delegate.method;
   Uri get url => Uri.parse(_delegate.url);
+
+  String get path {
+    List<String> pathSegments = [...url.pathSegments];
+    if (pathSegments.isNotEmpty) {
+      pathSegments.removeAt(0);
+    } else {
+      pathSegments = ["/"];
+    }
+    String path_url = url.replace(pathSegments: pathSegments).path;
+    if (path_url.isEmpty) {
+      return "/";
+    }
+    return path_url;
+  }
+
   Headers get headers {
     return headersFromJsObject(
       getProperty<headers_interop.Headers>(_delegate, 'headers'),
@@ -94,8 +109,7 @@ class Request implements Body {
   bool get bodyUsed => _delegate.bodyUsed;
 
   @override
-  Future<FormData> formData() async =>
-      formDataFromJsObject(await _delegate.formData());
+  Future<FormData> formData() async => formDataFromJsObject(await _delegate.formData());
 
   @override
   Future<Object?> json() async =>

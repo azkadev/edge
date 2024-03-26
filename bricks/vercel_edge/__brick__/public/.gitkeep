@@ -1,0 +1,3 @@
+// Vercel requires a `public` directory with at least one file.
+// You can use this directory to put public assets such as images, which
+// will available on the Vercel CDN.

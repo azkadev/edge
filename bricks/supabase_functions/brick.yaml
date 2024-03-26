@@ -1,0 +1,7 @@
+name: supabase_functions
+description: Generate a Dart Edge project using the Supabase Edge Functions.
+
+version: 0.1.0
+
+environment:
+  mason: ">=0.1.0-dev.41 <0.1.0"

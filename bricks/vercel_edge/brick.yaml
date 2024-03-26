@@ -1,0 +1,14 @@
+name: vercel_edge
+description: Generate a Dart Edge project using Vercel Edge.
+
+version: 0.1.0+1
+
+environment:
+  mason: ">=0.1.0-dev.41 <0.1.0"
+
+vars:
+  shelf:
+    type: boolean
+    description: Whether to use the shelf package for routing and handling requests.
+    default: false
+    prompt: Do you want to use the shelf package for routing and handling requests?

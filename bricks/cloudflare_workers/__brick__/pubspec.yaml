@@ -1,0 +1,14 @@
+name: cloudflare_workers_example
+description: A Cloudflare Workers function written in Dart.
+version: 1.0.0
+publish_to: none
+
+environment:
+  sdk: ">=2.18.5 <3.0.0"
+
+dependencies:
+  edge: ^0.0.1
+  cloudflare_workers: ^0.0.1
+
+dev_dependencies:
+  lints: ^2.0.1

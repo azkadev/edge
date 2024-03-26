@@ -1,0 +1,4 @@
+{
+  "buildCommand": "dart run edge build vercel_edge",
+  "devCommand": "dart run edge build vercel_edge --dev"
+}

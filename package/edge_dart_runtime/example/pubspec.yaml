@@ -10,4 +10,4 @@ environment:
 
 dependencies:
   edge: ^0.0.7
-  edge_dart_runtime: ^0.0.4+2
+  edge_dart_runtime: ^0.0.1

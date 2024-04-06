@@ -9,7 +9,7 @@ environment:
 dependencies:
   edge: ^0.0.7
   edge_http_client: ^0.0.1+3
-  general_lib: ^0.0.4
+  general_lib: ^0.0.31
   supabase: ^1.11.11
   supabase_client: ^0.0.25
   supabase_functions: ^0.0.1

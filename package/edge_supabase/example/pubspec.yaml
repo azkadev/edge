@@ -11,4 +11,4 @@ dependencies:
   xendit: ^0.0.23
   edge_dart_http_client:
    path: ../../edge_dart_http_client/
-  general_lib: ^0.0.4
+  general_lib: ^0.0.31

@@ -7,4 +7,4 @@ environment:
 
 dependencies:
   edge_cloudflare: 0.0.4+4
-  edge_dart: ^0.0.7
+  edge_dart: ^0.0.3

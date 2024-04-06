@@ -7,4 +7,4 @@ environment:
 
 dependencies:
   edge_netlify: 0.0.1-dev.14
-  edge_dart: ^0.0.7
+  edge_dart: ^0.0.3

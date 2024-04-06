@@ -8,6 +8,12 @@
       "languageVersion": "2.17"
     },
     {
+      "name": "alfred",
+      "rootUri": "file:///home/galaxeus/.pub-cache/hosted/pub.dev/alfred-1.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
       "name": "analyzer",
       "rootUri": "file:///home/galaxeus/.pub-cache/hosted/pub.dev/analyzer-5.13.0",
       "packageUri": "lib/",
@@ -183,7 +189,7 @@
     },
     {
       "name": "general_lib",
-      "rootUri": "file:///home/galaxeus/.pub-cache/hosted/pub.dev/general_lib-0.0.4",
+      "rootUri": "file:///home/galaxeus/.pub-cache/hosted/pub.dev/general_lib-0.0.31",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
@@ -260,6 +266,18 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "mime",
+      "rootUri": "file:///home/galaxeus/.pub-cache/hosted/pub.dev/mime-1.0.5",
+      "packageUri": "lib/",
+      "languageVersion": "3.2"
+    },
+    {
+      "name": "mime_type",
+      "rootUri": "file:///home/galaxeus/.pub-cache/hosted/pub.dev/mime_type-1.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "mustache_template",
       "rootUri": "file:///home/galaxeus/.pub-cache/hosted/pub.dev/mustache_template-2.0.0",
       "packageUri": "lib/",
@@ -306,6 +324,12 @@
       "rootUri": "file:///home/galaxeus/.pub-cache/hosted/pub.dev/pub_semver-2.1.4",
       "packageUri": "lib/",
       "languageVersion": "2.17"
+    },
+    {
+      "name": "queue",
+      "rootUri": "file:///home/galaxeus/.pub-cache/hosted/pub.dev/queue-3.1.0+2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
     },
     {
       "name": "recase",
@@ -440,7 +464,7 @@
       "languageVersion": "2.18"
     }
   ],
-  "generated": "2023-12-12T23:32:08.795422Z",
+  "generated": "2024-04-06T05:02:00.364974Z",
   "generator": "pub",
-  "generatorVersion": "3.2.3"
+  "generatorVersion": "3.3.0"
 }

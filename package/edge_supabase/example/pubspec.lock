@@ -9,6 +9,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "61.0.0"
+  alfred:
+    dependency: transitive
+    description:
+      name: alfred
+      sha256: "61c74bfccd41447ddb7eb76e0e1204e1b1da0c099d441d00fa8d2b86de5415e3"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.1.1"
   analyzer:
     dependency: transitive
     description:
@@ -174,28 +182,28 @@ packages:
       path: "../../edge_dart_http_client"
       relative: true
     source: path
-    version: "0.0.0"
+    version: "0.0.1"
   edge_dart_runtime:
     dependency: "direct overridden"
     description:
       path: "../../edge_dart_runtime"
       relative: true
     source: path
-    version: "0.0.0"
+    version: "0.0.1"
   edge_deno_deploy:
     dependency: "direct overridden"
     description:
       path: "../../edge_deno_deploy"
       relative: true
     source: path
-    version: "0.0.0"
+    version: "0.0.1"
   edge_supabase:
     dependency: "direct main"
     description:
       path: ".."
       relative: true
     source: path
-    version: "0.0.0"
+    version: "0.0.1"
   encrypt:
     dependency: transitive
     description:
@@ -240,10 +248,10 @@ packages:
     dependency: "direct main"
     description:
       name: general_lib
-      sha256: "7341be700815c8f36ae6508db855fbc33eb383541ad63b33bca82ca6a9de0fa6"
+      sha256: "0d5a0df33d4f5ec17e5a9028881c136f60bf712c4dc0adaded535ae2ab873f66"
       url: "https://pub.dev"
     source: hosted
-    version: "0.0.4"
+    version: "0.0.31"
   glob:
     dependency: transitive
     description:
@@ -340,6 +348,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.11.0"
+  mime:
+    dependency: transitive
+    description:
+      name: mime
+      sha256: "2e123074287cc9fd6c09de8336dae606d1ddb88d9ac47358826db698c176a1f2"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.5"
+  mime_type:
+    dependency: transitive
+    description:
+      name: mime_type
+      sha256: "2ad6e67d3d2de9ac0f8ef5352d998fd103cb21351ae8c02fb0c78b079b37d275"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.0"
   mustache_template:
     dependency: transitive
     description:
@@ -404,6 +428,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.4"
+  queue:
+    dependency: transitive
+    description:
+      name: queue
+      sha256: "9a41ecadc15db79010108c06eae229a45c56b18db699760f34e8c9ac9b831ff9"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.1.0+2"
   recase:
     dependency: transitive
     description:

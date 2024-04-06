@@ -159,14 +159,14 @@ packages:
       path: "../edge_dart"
       relative: true
     source: path
-    version: "0.0.11"
+    version: "0.0.3"
   edge_dart_runtime:
     dependency: "direct main"
     description:
       path: "../edge_dart_runtime"
       relative: true
     source: path
-    version: "0.0.11"
+    version: "0.0.1"
   ffi:
     dependency: transitive
     description:

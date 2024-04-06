@@ -8,8 +8,8 @@ environment:
   sdk: ">=2.18.5 <4.0.0"
 
 dependencies:
-  edge_dart: ^0.0.7
-  edge_dart_runtime: ^0.0.4+2
+  edge_dart: ^0.0.3
+  edge_dart_runtime: ^0.0.1
   js: ^0.6.7
   typings: ^0.0.4
 
